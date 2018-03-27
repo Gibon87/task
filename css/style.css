@@ -18,6 +18,7 @@ img {
   display: flex; }
 
 .navigation {
+  background-color: #272b2f;
   display: flex; }
   .navigation .nav {
     width: 100%;
@@ -106,7 +107,7 @@ img {
   justify-content: center; }
   .menu .sticky-nav {
     width: 80%;
-    border: 4px solid green;
+    border: 4px solid white;
     position: relative; }
   .menu .box-left {
     position: absolute;
@@ -133,11 +134,11 @@ img {
   margin: 0 80px;
   padding: 10px;
   display: flex;
-  border: 4px solid red;
   justify-content: center;
   align-items: center; }
 
 .head {
+  margin: 10px;
   padding: 10px;
   border: 1px solid white;
   display: flex;
@@ -159,5 +160,78 @@ img {
   width: 300px;
   height: 300px;
   border: 1px solid white; }
+
+.our-products {
+  width: 80%;
+  padding: 0 40px; }
+
+.our-products_box {
+  margin: 0 80px;
+  padding: 10px;
+  display: flex;
+  border: 4px solid red;
+  justify-content: center;
+  align-items: center; }
+
+.heads {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  width: 300px; }
+
+.boxes {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.box {
+  margin: 10px;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  border: 1px solid white; }
+
+.carrer {
+  display: flex;
+  flex-direction: row; }
+
+.hexagon {
+  position: relative;
+  margin: 1em auto;
+  width: 10em;
+  height: 17.32em;
+  background: white;
+  transition: opacity .5s;
+  cursor: pointer; }
+
+.hexagon::before {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: '';
+  transform: rotate(60deg); }
+
+.hexagon:after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: '';
+  transform: rotate(-60deg); }
+
+.footer {
+  display: flex;
+  justify-content: space-around; }
+
+.left {
+  margin-left: 10em; }
+
+.right {
+  margin-right: 10em; }
 
 /*# sourceMappingURL=style.css.map */
