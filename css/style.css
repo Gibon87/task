@@ -193,36 +193,75 @@ img {
   height: 300px;
   border: 1px solid white; }
 
-.carrer {
-  display: flex;
-  flex-direction: row; }
+.career {
+  background-image: url("../img/carrer.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 623px;
+  position: relative; }
+
+.career-box {
+  position: absolute; }
+
+.career-careers {
+  left: 214px;
+  top: 0; }
+  .career-careers .hexagon {
+    background-color: green; }
+    .career-careers .hexagon::before {
+      border-left-color: green; }
+    .career-careers .hexagon::after {
+      border-right-color: green; }
+
+.career-icon {
+  left: 479px;
+  top: 125.5px; }
+  .career-icon .hexagon {
+    background-color: yellow; }
+    .career-icon .hexagon::before {
+      border-left-color: yellow; }
+    .career-icon .hexagon::after {
+      border-right-color: yellow; }
+
+.career-cv {
+  left: 479px;
+  top: 376.5px; }
+  .career-cv .hexagon {
+    background-color: black; }
+    .career-cv .hexagon::before {
+      border-left-color: black; }
+    .career-cv .hexagon::after {
+      border-right-color: black; }
+
+.career-slider {
+  left: 1009px;
+  top: 125.5px; }
+  .career-slider .hexagon {
+    background-color: pink; }
+    .career-slider .hexagon::before {
+      border-left-color: pink; }
+    .career-slider .hexagon::after {
+      border-right-color: pink; }
 
 .hexagon {
+  height: 251px;
   position: relative;
-  margin: 1em auto;
-  width: 10em;
-  height: 17.32em;
-  background: white;
-  transition: opacity .5s;
-  cursor: pointer; }
-
-.hexagon::before {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  border-radius: inherit;
-  background: inherit;
-  content: '';
-  transform: rotate(60deg); }
-
-.hexagon:after {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  border-radius: inherit;
-  background: inherit;
-  content: '';
-  transform: rotate(-60deg); }
+  width: 204px; }
+  .hexagon::before {
+    border-style: solid;
+    content: "";
+    position: absolute;
+    border-width: 125.5px 0 125.5px 61px;
+    border-color: transparent transparent transparent transparent;
+    right: -61px; }
+  .hexagon::after {
+    border-style: solid;
+    content: "";
+    position: absolute;
+    border-width: 125.5px 61px 125.5px 0;
+    border-color: transparent transparent transparent transparent;
+    left: -61px; }
 
 .footer {
   display: flex;

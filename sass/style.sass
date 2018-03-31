@@ -1,4 +1,3 @@
-
 body
   margin: 0
   padding: 0
@@ -7,10 +6,10 @@ body
   font-family: "arial"
   box-sizing: border-box
 
-
 .container
   width: 100%
   max-width: 1500px
+
   // display: flex
   margin: 0 auto
   border: 1px solid white
@@ -23,9 +22,11 @@ img
 .navigation
   background-color: #272b2f
   display: flex
+
   .nav
     width: 100%
     padding: 10px 0
+
     ul
       display: flex
       padding: 0
@@ -33,11 +34,13 @@ img
       list-style: none
       justify-content: flex-end
       font-size: 16px
+
       li
         display: flex
         padding: 10px 20px
         margin-left: 0 10px
         border-left: 1px solid #FFF
+
         a
           text-decoration: none
           color: white
@@ -45,6 +48,7 @@ img
 .social
   padding: 10px 0
   text-align: center
+
   ul
     display: flex
     padding: 0
@@ -52,11 +56,13 @@ img
     list-style: none
     justify-content: flex-end
     font-size: 16px
+
     li
       display: flex
       padding: 10px 20px
       margin-left: 0 10px
       border-left: 1px solid #FFF
+
       a
         color: white
         text-decoration: none
@@ -64,32 +70,36 @@ img
 .slider
   height: 90vh
   display: flex
-  background-image: url('https://cdn.pixabay.com/photo/2016/10/17/07/53/busan-night-scene-1747130_960_720.jpg')
+  background-image: url("https://cdn.pixabay.com/photo/2016/10/17/07/53/busan-night-scene-1747130_960_720.jpg")
   background-repeat: no-repeat
   background-size: cover
   overflow: auto
+
   .indicator-left
-      position: absolute
-      top: calc(100%/2)
-      left: 0
-      width: 40px
-      height: 40px
-      background-color: white
+    position: absolute
+    top: calc(100%/2)
+    left: 0
+    width: 40px
+    height: 40px
+    background-color: white
+
   .indicator-right
-      position: absolute
-      top: calc(100%/2)
-      right: 0
-      width: 40px
-      height: 40px
-      background-color: white
+    position: absolute
+    top: calc(100%/2)
+    right: 0
+    width: 40px
+    height: 40px
+    background-color: white
 
 // SECTION OF STICKY-NAV
 
 .menu
   display: flex
+
   .sticky-nav
     width: 100%
     padding: 10px 0
+
     ul
       display: flex
       padding: 0
@@ -97,11 +107,13 @@ img
       list-style: none
       justify-content: center
       font-size: 16px
+
       li
         display: flex
         padding: 10px 20px
         margin-left: 0 10px
         border-left: 1px solid #FFF
+
         a
           text-decoration: none
           color: white
@@ -110,6 +122,7 @@ img
   position: relative
   display: flex
   justify-content: center
+
   .sticky-nav
     width: 80%
     border: 4px solid white
@@ -133,9 +146,7 @@ img
     margin: 10px
     background-color: white
 
-
 // OUR SERCICES SECTION
-
 
 .our-service
   // background-color: #eff2f4
@@ -156,6 +167,7 @@ img
   display: flex
   flex-direction: column
   width: 300px
+
 .text
   display: flex
   flex-direction: row
@@ -164,13 +176,13 @@ img
   display: flex
   align-items: center
   justify-content: center
+
 .box
   margin: 10px
   text-align: center
   width: 300px
   height: 300px
   border: 1px solid white
-
 
 // OUR PRODUCTS SECTION
 
@@ -199,6 +211,7 @@ img
   display: flex
   align-items: center
   justify-content: center
+
 .box
   margin: 10px
   text-align: center
@@ -206,56 +219,89 @@ img
   height: 300px
   border: 1px solid white
 
-.trapezoid
-	// border-left: 50px solid transparent
-	// border-right: 50px solid transparent
-	// height: 0
-  // border-bottom: 70px solid white
-	// width: 60
-  // position: relative
-  // top: -50px
-  // left: 50%
-  // color: white
-
 // CARRER SECTION
 
-.carrer
-  display: flex
-  flex-direction: row
-.hexagon
+$first-hexagon-left-position: 214px
+$hexagon-base-width: 204px
+$hexagon-height: 251px
+$hexagon-triangle-width: 61px
+
+=triangle-border-base
+  border-style: solid
+  content: ""
+  position: absolute
+
+=triangle-color($color)
+  .hexagon
+    background-color: $color
+
+    &::before
+      border-left-color: $color
+
+    &::after
+      border-right-color: $color
+
+.career
+  background-image: url("../img/carrer.jpg")
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  height: 623px
   position: relative
-  margin: 1em auto
-  width: 10em
-  height: 17.32em
-  background: white
-  transition: opacity .5s
-  cursor: pointer
 
-.hexagon::before
+.career-box
   position: absolute
-  width: inherit
-  height: inherit
-  border-radius: inherit
-  background: inherit
-  content: ''
-  transform: rotate(60deg)
 
-.hexagon:after
-  position: absolute
-  width: inherit
-  height: inherit
-  border-radius: inherit
-  background: inherit
-  content: ''
-  transform: rotate(-60deg)
+.career-careers
+  +triangle-color(green)
 
+  left: $first-hexagon-left-position
+  top: 0
 
+.career-icon
+  +triangle-color(yellow)
+
+  left: $first-hexagon-left-position + $hexagon-triangle-width + $hexagon-base-width
+  top: $hexagon-height / 2
+
+.career-cv
+  +triangle-color(black)
+
+  left: $first-hexagon-left-position + $hexagon-triangle-width + $hexagon-base-width
+  top: $hexagon-height / 2 + $hexagon-height
+
+.career-slider
+  +triangle-color(pink)
+
+  left: $first-hexagon-left-position + $hexagon-triangle-width * 3 + $hexagon-base-width * 3
+  top: $hexagon-height / 2
+
+.hexagon
+  height: $hexagon-height
+  position: relative
+  width: $hexagon-base-width
+
+  &::before
+    +triangle-border-base
+
+    border-width: ($hexagon-height / 2) 0 ($hexagon-height / 2) $hexagon-triangle-width
+    border-color: transparent transparent transparent transparent
+    right: -$hexagon-triangle-width
+
+  &::after
+    +triangle-border-base
+
+    border-width: ($hexagon-height / 2) $hexagon-triangle-width ($hexagon-height / 2) 0
+    border-color: transparent transparent transparent transparent
+    left: -$hexagon-triangle-width
 
 // FOOTER
 .footer
   display: flex
   justify-content: space-around
+
 .left
   margin-left: 10em
+
 .right
   margin-right: 10em
