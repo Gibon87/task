@@ -3,30 +3,25 @@ body
   padding: 0
   color: #626a72
   background-color: #262626
-  font-family: "arial"
   box-sizing: border-box
 
 .container
   width: 100%
   max-width: 1500px
-
-  // display: flex
   margin: 0 auto
-  border: 1px solid white
+  // border: 1px solid white
 
-img
-  margin: 10px 20px
-  border: 5px solid white
-  display: flex
+// img
+//   margin: 10px 20px
+//   border: 5px solid white
+//   display: flex
 
 .navigation
   background-color: #272b2f
   display: flex
-
   .nav
     width: 100%
     padding: 10px 0
-
     ul
       display: flex
       padding: 0
@@ -34,21 +29,29 @@ img
       list-style: none
       justify-content: flex-end
       font-size: 16px
-
       li
         display: flex
         padding: 10px 20px
         margin-left: 0 10px
         border-left: 1px solid #FFF
-
         a
           text-decoration: none
           color: white
 
+.logo
+  font-size: 40px
+  margin: 4px 0 0 20px
+  &::after
+    content: ''
+    position: absolute
+    border-bottom: 2px solid #f19621
+
+
+
+
 .social
   padding: 10px 0
   text-align: center
-
   ul
     display: flex
     padding: 0
@@ -56,40 +59,73 @@ img
     list-style: none
     justify-content: flex-end
     font-size: 16px
-
     li
       display: flex
-      padding: 10px 20px
+      padding: 10px 10px
       margin-left: 0 10px
       border-left: 1px solid #FFF
-
       a
         color: white
         text-decoration: none
 
 .slider
-  height: 90vh
-  display: flex
-  background-image: url("https://cdn.pixabay.com/photo/2016/10/17/07/53/busan-night-scene-1747130_960_720.jpg")
+  background-image: url("../img/slider-blue.jpg")
   background-repeat: no-repeat
   background-size: cover
-  overflow: auto
+  height: 578px
+  overflow: hidden
 
-  .indicator-left
+  .slider-1
     position: absolute
-    top: calc(100%/2)
-    left: 0
-    width: 40px
-    height: 40px
-    background-color: white
+    max-width: 100%
+    height: 577px
 
-  .indicator-right
+// INDICATORS
+$indicator-height: 82px
+$indicator-widht: 46px
+
+
+.indicator-box-left
+  position: absolute
+  background-color: #db09e6
+  height: $indicator-height
+  left: 0
+  position: absolute
+  top: calc(90%/2)
+  width: $indicator-widht
+  &::after
+    content: ''
     position: absolute
-    top: calc(100%/2)
-    right: 0
-    width: 40px
-    height: 40px
-    background-color: white
+    left: $indicator-widht
+    border-style: solid
+    border-width: ($indicator-height / 2) 0  + ($indicator-height / 6) + ($indicator-widht / 2)
+    border-color: transparent transparent transparent #db09e6
+
+.indicator-box-right
+  position: absolute
+  background-color: #db09e6
+  height: $indicator-height
+  right: 0
+  position: absolute
+  top: calc(90%/2)
+  width: $indicator-widht
+  &::after
+    content: ''
+    position: absolute
+    right: $indicator-widht
+    border-style: solid
+    border-width: ($indicator-height / 2) 0  + ($indicator-height / 6) + ($indicator-widht / 2)
+    border-color: transparent #db09e6 transparent transparent
+
+
+.slider-text
+  position: absolute
+  top: 20%
+  left: 12%
+  h2
+    color: white
+    font-size: 60px
+    width: 630px
 
 // SECTION OF STICKY-NAV
 
@@ -234,10 +270,8 @@ $hexagon-triangle-width: 61px
 =triangle-color($color)
   .hexagon
     background-color: $color
-
     &::before
       border-left-color: $color
-
     &::after
       border-right-color: $color
 
@@ -254,19 +288,16 @@ $hexagon-triangle-width: 61px
 
 .career-careers
   +triangle-color(green)
-
   left: $first-hexagon-left-position
   top: 0
 
 .career-icon
   +triangle-color(yellow)
-
   left: $first-hexagon-left-position + $hexagon-triangle-width + $hexagon-base-width
   top: $hexagon-height / 2
 
 .career-cv
   +triangle-color(black)
-
   left: $first-hexagon-left-position + $hexagon-triangle-width + $hexagon-base-width
   top: $hexagon-height / 2 + $hexagon-height
 
@@ -280,17 +311,13 @@ $hexagon-triangle-width: 61px
   height: $hexagon-height
   position: relative
   width: $hexagon-base-width
-
   &::before
     +triangle-border-base
-
     border-width: ($hexagon-height / 2) 0 ($hexagon-height / 2) $hexagon-triangle-width
     border-color: transparent transparent transparent transparent
     right: -$hexagon-triangle-width
-
   &::after
     +triangle-border-base
-
     border-width: ($hexagon-height / 2) $hexagon-triangle-width ($hexagon-height / 2) 0
     border-color: transparent transparent transparent transparent
     left: -$hexagon-triangle-width
@@ -298,10 +325,14 @@ $hexagon-triangle-width: 61px
 // FOOTER
 .footer
   display: flex
-  justify-content: space-around
+  justify-content: space-between
 
 .left
-  margin-left: 10em
+  margin-left: 163px
+  h3
+    font-size: 12px
 
 .right
-  margin-right: 10em
+  margin-right: 166px
+  h3
+    font-size: 12px
