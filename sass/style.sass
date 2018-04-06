@@ -10,7 +10,6 @@ body
   max-width: 1500px
   margin: 0 auto
 
-
 .navigation
   background-color: #272b2f
   display: flex
@@ -82,7 +81,12 @@ body
 
 // INDICATORS
 $indicator-height: 82px
-$indicator-widht: 46px
+$indicator-width: 46px
+
+=triangle-border-base
+  border-style: solid
+  content: ""
+  position: absolute
 
 .indicator-box-left
   position: absolute
@@ -91,14 +95,13 @@ $indicator-widht: 46px
   left: 0
   position: absolute
   top: calc(90%/2)
-  width: $indicator-widht
+  width: $indicator-width
 
   &::after
-    content: ""
-    position: absolute
-    left: $indicator-widht
-    border-style: solid
-    border-width: ($indicator-height / 2) (0 + $indicator-height / $indicator-widht + $indicator-widht / 2)
+    +triangle-border-base
+
+    left: $indicator-width
+    border-width: ($indicator-height / 2) (0 + $indicator-height / $indicator-width + $indicator-width / 2)
     border-color: transparent transparent transparent #db09e6
 
 .indicator-box-right
@@ -108,14 +111,12 @@ $indicator-widht: 46px
   right: 0
   position: absolute
   top: calc(90%/2)
-  width: $indicator-widht
+  width: $indicator-width
 
   &::after
-    content: ""
-    position: absolute
-    right: $indicator-widht
-    border-style: solid
-    border-width: ($indicator-height / 2) (0 + $indicator-height / $indicator-widht + $indicator-widht / 2)
+    +triangle-border-base
+    right: $indicator-width
+    border-width: ($indicator-height / 2) (0 + $indicator-height / $indicator-width + $indicator-width / 2)
     border-color: transparent #db09e6 transparent transparent
 
 .slider-text
@@ -249,7 +250,6 @@ $indicator-widht: 46px
   align-items: center
   justify-content: center
 
-
 // CARRER SECTION
 
 $first-hexagon-left-position: 214px
@@ -330,6 +330,9 @@ $hexagon-triangle-width: 61px
 
 .contact
   background-color: #272b2f
+  display: flex
+  justify-content: space-around
+  flex-direction: column
 
 .describe-box
   display: flex
@@ -353,7 +356,6 @@ $hexagon-triangle-width: 61px
       a
         text-decoration: none
         color: white
-
 
 // FOOTER
 .footer
