@@ -1,3 +1,7 @@
+$white-color: #FFF
+$blue-color: #1fb5e3
+$oragne-color: #f19621
+
 body
   margin: 0
   padding: 0
@@ -24,8 +28,6 @@ header
     width: 100%
     margin: 20px
 
-    // padding: 10px 0
-
     ul
       display: flex
       padding: 0
@@ -37,20 +39,36 @@ header
       li
         display: flex
         padding: 10px 20px
-        border-left: 1px solid #FFF
+        border-left: 1px solid $white-color
 
         a
           text-decoration: none
-          color: white
+          color: $white-color
 
 .logo
-  font-size: 40px
-  margin: 20px
+  color: $white-color
+  font-size: 30px
+  margin: 20px 0 10px 28px
 
   &::after
+    bottom: 7px
+    background-color: $blue-color
     content: ""
+    height: 1px
     position: absolute
-    border-bottom: 2px solid #f19621
+    width: 54px
+.logo
+  span
+    &::after
+      bottom: 7px
+      background-color: $oragne-color
+      content: ""
+      height: 1px
+      left: 82px
+      position: absolute
+      width: 134px
+
+
 
 .social
   padding: 10px 0
@@ -69,12 +87,11 @@ header
 
       a
         width: 70px
-        height: 70px
-        color: white
+        color: $white-color
         text-decoration: none
 
 .icon-height
-  margin: 20px
+  margin: 18px
 
 // SLIDER SECTION
 
@@ -137,7 +154,7 @@ $indicator-width: 46px
   left: 12%
 
   h2
-    color: white
+    color: $white-color
     font-size: 60px
     width: 630px
 
@@ -151,7 +168,7 @@ $indicator-width: 46px
 
   .sticky-nav
     border: 4px solid black
-    background-color: white
+    background-color: $white-color
     padding: 10px 0
     position: relative
     width: 80%
@@ -168,7 +185,7 @@ $indicator-width: 46px
         display: flex
         padding: 10px 20px
         margin-left: 0 10px
-        border-left: 1px solid #FFF
+        border-left: 1px solid $white-color
 
         a
           text-decoration: none
@@ -193,6 +210,10 @@ $indicator-width: 46px
     background-color: green
 
 // OUR SERCICES SECTION
+=flex-center-position
+  align-items: center
+  display: flex
+  justify-content: center
 
 .services-background
   background-color: #eff2f4
@@ -205,22 +226,21 @@ $indicator-width: 46px
   padding: 0 40px
 
 .our-services_box
+  +flex-center-position
+
   margin: 0 80px
   padding: 10px
-  display: flex
-  justify-content: center
-  align-items: center
 
 .head
   margin: 10px
   padding: 10px
-  border: 1px solid white
+  border: 1px solid $white-color
   display: flex
   flex-direction: column
   width: 300px
 
   h1
-    color: #1fb5e3
+    color: $blue-color
 
 .text
   display: flex
@@ -242,15 +262,19 @@ $indicator-width: 46px
   text-align: center
   width: 300px
   height: 300px
-  border: 1px solid white
+  border: 1px solid $white-color
 
 .box-height
   margin-top: 120px
 
 // OUR PRODUCTS SECTION
+=flex-center-position
+  align-items: center
+  display: flex
+  justify-content: center
 
 .products-background
-  background-color: #1fb5e3
+  background-color: $blue-color
   display: flex
   justify-content: center
   width: 100%
@@ -261,14 +285,6 @@ $indicator-width: 46px
   padding: 0 40px
   width: 80%
 
-.our-products_box
-  margin: 0 80px
-  padding: 10px
-  display: flex
-  border: 4px solid red
-  justify-content: center
-  align-items: center
-
 .heads
   display: flex
   flex-direction: column
@@ -277,13 +293,10 @@ $indicator-width: 46px
   width: 300px
 
 .boxes-icons
-  align-items: center
-  display: flex
-  justify-content: center
+  +flex-center-position
 
 .box-icon
   margin: 10px
-  text-align: center
   width: 400px
   height: 300px
   text-align: left
@@ -318,32 +331,32 @@ $hexagon-triangle-width: 61px
   background-position: center
   background-repeat: no-repeat
   background-size: cover
-  height: 623px
+  height: 628px
   position: relative
 
 .career-box
   position: absolute
 
 .career-careers
-  +triangle-color(green)
+  +triangle-color($blue-color)
 
   left: $first-hexagon-left-position
   top: 0
 
 .career-icon
-  +triangle-color(yellow)
+  +triangle-color($blue-color)
 
   left: $first-hexagon-left-position + $hexagon-triangle-width + $hexagon-base-width
   top: $hexagon-height / 2
 
 .career-cv
-  +triangle-color(black)
+  +triangle-color($white-color)
 
   left: $first-hexagon-left-position + $hexagon-triangle-width + $hexagon-base-width
   top: $hexagon-height / 2 + $hexagon-height
 
 .career-slider
-  +triangle-color(pink)
+  +triangle-color($oragne-color)
 
   left: $first-hexagon-left-position + $hexagon-triangle-width * 3 + $hexagon-base-width * 3
   top: $hexagon-height / 2
@@ -368,6 +381,10 @@ $hexagon-triangle-width: 61px
     left: -$hexagon-triangle-width
 
 // CONTACT SECTION
+=content-position
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
 
 .contact
   background-color: #272b2f
@@ -376,9 +393,7 @@ $hexagon-triangle-width: 61px
   flex-direction: column
 
 .describe-box
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
+  +content-position
 
   ul
     display: inline-block

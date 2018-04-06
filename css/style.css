@@ -35,15 +35,28 @@ header {
         border-left: 1px solid #FFF; }
         .navigation .nav ul li a {
           text-decoration: none;
-          color: white; }
+          color: #FFF; }
 
 .logo {
-  font-size: 40px;
-  margin: 20px; }
+  color: #FFF;
+  font-size: 30px;
+  margin: 20px 0 10px 28px; }
   .logo::after {
+    bottom: 7px;
+    background-color: #1fb5e3;
     content: "";
+    height: 1px;
     position: absolute;
-    border-bottom: 2px solid #f19621; }
+    width: 54px; }
+
+.logo span::after {
+  bottom: 7px;
+  background-color: #f19621;
+  content: "";
+  height: 1px;
+  left: 82px;
+  position: absolute;
+  width: 134px; }
 
 .social {
   padding: 10px 0;
@@ -59,12 +72,11 @@ header {
       display: flex; }
       .social ul li a {
         width: 70px;
-        height: 70px;
-        color: white;
+        color: #FFF;
         text-decoration: none; }
 
 .icon-height {
-  margin: 20px; }
+  margin: 18px; }
 
 .slider {
   background-image: url("../img/slider-blue.jpg");
@@ -114,7 +126,7 @@ header {
   top: 20%;
   left: 12%; }
   .slider-text h2 {
-    color: white;
+    color: #FFF;
     font-size: 60px;
     width: 630px; }
 
@@ -125,7 +137,7 @@ header {
   background-color: #eff2f4; }
   .menu .sticky-nav {
     border: 4px solid black;
-    background-color: white;
+    background-color: #FFF;
     padding: 10px 0;
     position: relative;
     width: 80%; }
@@ -172,16 +184,16 @@ header {
   padding: 0 40px; }
 
 .our-services_box {
-  margin: 0 80px;
-  padding: 10px;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  margin: 0 80px;
+  padding: 10px; }
 
 .head {
   margin: 10px;
   padding: 10px;
-  border: 1px solid white;
+  border: 1px solid #FFF;
   display: flex;
   flex-direction: column;
   width: 300px; }
@@ -206,7 +218,7 @@ header {
   text-align: center;
   width: 300px;
   height: 300px;
-  border: 1px solid white; }
+  border: 1px solid #FFF; }
 
 .box-height {
   margin-top: 120px; }
@@ -223,14 +235,6 @@ header {
   padding: 0 40px;
   width: 80%; }
 
-.our-products_box {
-  margin: 0 80px;
-  padding: 10px;
-  display: flex;
-  border: 4px solid red;
-  justify-content: center;
-  align-items: center; }
-
 .heads {
   display: flex;
   flex-direction: column;
@@ -245,7 +249,6 @@ header {
 
 .box-icon {
   margin: 10px;
-  text-align: center;
   width: 400px;
   height: 300px;
   text-align: left; }
@@ -258,7 +261,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 623px;
+  height: 628px;
   position: relative; }
 
 .career-box {
@@ -268,41 +271,41 @@ header {
   left: 214px;
   top: 0; }
   .career-careers .hexagon {
-    background-color: green; }
+    background-color: #1fb5e3; }
     .career-careers .hexagon::before {
-      border-left-color: green; }
+      border-left-color: #1fb5e3; }
     .career-careers .hexagon::after {
-      border-right-color: green; }
+      border-right-color: #1fb5e3; }
 
 .career-icon {
   left: 479px;
   top: 125.5px; }
   .career-icon .hexagon {
-    background-color: yellow; }
+    background-color: #1fb5e3; }
     .career-icon .hexagon::before {
-      border-left-color: yellow; }
+      border-left-color: #1fb5e3; }
     .career-icon .hexagon::after {
-      border-right-color: yellow; }
+      border-right-color: #1fb5e3; }
 
 .career-cv {
   left: 479px;
   top: 376.5px; }
   .career-cv .hexagon {
-    background-color: black; }
+    background-color: #FFF; }
     .career-cv .hexagon::before {
-      border-left-color: black; }
+      border-left-color: #FFF; }
     .career-cv .hexagon::after {
-      border-right-color: black; }
+      border-right-color: #FFF; }
 
 .career-slider {
   left: 1009px;
   top: 125.5px; }
   .career-slider .hexagon {
-    background-color: pink; }
+    background-color: #f19621; }
     .career-slider .hexagon::before {
-      border-left-color: pink; }
+      border-left-color: #f19621; }
     .career-slider .hexagon::after {
-      border-right-color: pink; }
+      border-right-color: #f19621; }
 
 .hexagon {
   height: 251px;
