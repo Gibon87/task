@@ -1,13 +1,17 @@
 $white-color: #FFF
 $blue-color: #1fb5e3
 $oragne-color: #f19621
+$fill-color: #272b2f
+
+*
+  box-sizing: border-box
+
 
 body
+  background-color: $fill-color
+  color: #626a72
   margin: 0
   padding: 0
-  color: #626a72
-  background-color: #262626
-  box-sizing: border-box
 
 header
   position: sticky
@@ -15,9 +19,9 @@ header
   z-index: 999
 
 .container
-  width: 100%
   max-width: 1500px
   margin: 0 auto
+  width: 100%
 
 .navigation
   background-color: #272b2f
@@ -93,6 +97,8 @@ header
 .icon-height
   margin: 18px
 
+
+
 // SLIDER SECTION
 
 .slider
@@ -160,6 +166,24 @@ $indicator-width: 46px
 
 // SECTION OF STICKY-NAV
 
+=box-position-left
+  position: absolute
+  top: -20px
+  left: 0
+  width: 60px
+  height: 60px
+  margin: 10px
+  background-color: green
+
+=box-position-right
+  position: absolute
+  top: -20px
+  right: 0
+  width: 60px
+  height: 60px
+  margin: 10px
+  background-color: green
+
 .menu
   display: flex
   position: relative
@@ -192,24 +216,14 @@ $indicator-width: 46px
           color: #909fae
 
   .box-left
-    position: absolute
-    top: -20px
-    left: 0
-    width: 60px
-    height: 60px
-    margin: 10px
-    background-color: green
+    +box-position-left
 
   .box-right
-    position: absolute
-    top: -20px
-    right: 0
-    width: 60px
-    height: 60px
-    margin: 10px
-    background-color: green
+    +box-position-right
 
 // OUR SERCICES SECTION
+$padding-20: 20px
+
 =flex-center-position
   align-items: center
   display: flex
@@ -247,10 +261,10 @@ $indicator-width: 46px
   flex-direction: row
 
   .text-1
-    padding: 20px
+    padding: $padding-20
 
   .text-2
-    padding: 20px
+    padding: $padding-20
 
 .boxes
   display: flex
@@ -300,6 +314,8 @@ $indicator-width: 46px
   width: 400px
   height: 300px
   text-align: left
+  h2
+    margin: 0
 
 .image-height
   margin-bottom: 180px
@@ -389,8 +405,6 @@ $hexagon-triangle-width: 61px
 .contact
   background-color: #272b2f
   display: flex
-  justify-content: space-around
-  flex-direction: column
 
 .describe-box
   +content-position

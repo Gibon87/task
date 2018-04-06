@@ -1,9 +1,11 @@
-body {
-  margin: 0;
-  padding: 0;
-  color: #626a72;
-  background-color: #262626;
+* {
   box-sizing: border-box; }
+
+body {
+  background-color: #272b2f;
+  color: #626a72;
+  margin: 0;
+  padding: 0; }
 
 header {
   position: sticky;
@@ -11,9 +13,9 @@ header {
   z-index: 999; }
 
 .container {
-  width: 100%;
   max-width: 1500px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%; }
 
 .navigation {
   background-color: #272b2f;
@@ -252,6 +254,8 @@ header {
   width: 400px;
   height: 300px;
   text-align: left; }
+  .box-icon h2 {
+    margin: 0; }
 
 .image-height {
   margin-bottom: 180px; }
@@ -328,9 +332,7 @@ header {
 
 .contact {
   background-color: #272b2f;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column; }
+  display: flex; }
 
 .describe-box {
   display: flex;
