@@ -216,10 +216,11 @@ $box-width: 90px
   display: flex
   position: relative
   justify-content: center
-  background-color: #eff2f4
+  background-color: $white-color
+  // background-color: #eff2f4
 
   .sticky-nav
-    border: 1px solid black
+    // border: 1px solid black
     background-color: $white-color
     padding: 10px 0
     position: relative
@@ -230,14 +231,13 @@ $box-width: 90px
       padding: 0
       margin: 0
       list-style: none
-      justify-content: center
+      justify-content: space-around
       font-size: 16px
 
       li
+        border-left: 1px solid $white-color
         display: flex
         padding: 10px 20px
-        margin-left: 0 10px
-        border-left: 1px solid $white-color
 
         a
           text-decoration: none
@@ -447,8 +447,7 @@ $hexagon-triangle-width: 61px
       text-decoration: none
       display: flex
       padding: 10px 20px
-      margin-left: 0 10px
-      border-left: 1px solid #FFF
+
 
       a
         text-decoration: none
