@@ -135,7 +135,7 @@ header {
 
 .box-left {
   height: 120px;
-  width: 84px;
+  width: 90px;
   left: 0;
   position: absolute;
   top: -60px;
@@ -145,13 +145,13 @@ header {
   border-style: solid;
   content: "";
   position: absolute;
-  left: 84px;
-  border-width: 120px 0 0 42px;
+  left: 90px;
+  border-width: 120px 0 0 45px;
   border-color: transparent transparent transparent #eff2f4; }
 
 .box-right {
   height: 120px;
-  width: 84px;
+  width: 90px;
   right: 0;
   position: absolute;
   top: -60px;
@@ -160,8 +160,8 @@ header {
     border-style: solid;
     content: "";
     position: absolute;
-    right: 84px;
-    border-width: 0 0 120px 42px;
+    right: 90px;
+    border-width: 0 0 120px 45px;
     border-color: transparent transparent #eff2f4 transparent; }
 
 .menu {
