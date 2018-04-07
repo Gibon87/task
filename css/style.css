@@ -104,13 +104,12 @@ header {
     width: 630px; }
 
 .indicator-box-left {
-  position: absolute;
-  background-color: #7e4ae8;
   height: 82px;
-  left: 0;
   position: absolute;
   top: calc(90%/2);
-  width: 46px; }
+  width: 46px;
+  background-color: #7e4ae8;
+  left: 0; }
   .indicator-box-left::after {
     border-style: solid;
     content: "";
@@ -120,13 +119,12 @@ header {
     border-color: transparent transparent transparent #7e4ae8; }
 
 .indicator-box-right {
-  position: absolute;
-  background-color: #f19621;
   height: 82px;
-  right: 0;
   position: absolute;
   top: calc(90%/2);
-  width: 46px; }
+  width: 46px;
+  background-color: #f19621;
+  right: 0; }
   .indicator-box-right::after {
     border-style: solid;
     content: "";
@@ -136,7 +134,7 @@ header {
     border-color: transparent #f19621 transparent transparent; }
 
 .box-left {
-  height: 100px;
+  height: 120px;
   width: 84px;
   left: 0;
   position: absolute;
@@ -148,11 +146,11 @@ header {
   content: "";
   position: absolute;
   left: 84px;
-  border-width: 84px 0 0 42px;
+  border-width: 120px 0 0 42px;
   border-color: transparent transparent transparent #eff2f4; }
 
 .box-right {
-  height: 100px;
+  height: 120px;
   width: 84px;
   right: 0;
   position: absolute;
@@ -163,7 +161,7 @@ header {
     content: "";
     position: absolute;
     right: 84px;
-    border-width: 0 0 84px 42px;
+    border-width: 0 0 120px 42px;
     border-color: transparent transparent #eff2f4 transparent; }
 
 .menu {
@@ -172,7 +170,7 @@ header {
   justify-content: center;
   background-color: #eff2f4; }
   .menu .sticky-nav {
-    border: 4px solid black;
+    border: 1px solid black;
     background-color: #FFF;
     padding: 10px 0;
     position: relative;

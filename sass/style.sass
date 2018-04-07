@@ -143,15 +143,16 @@ $indicator-width: 46px
   content: ""
   position: absolute
 
-.indicator-box-left
-  position: absolute
-  background-color: $fiolet-color
+=indicator-box
   height: $indicator-height
-  left: 0
   position: absolute
   top: calc(90%/2)
   width: $indicator-width
 
+.indicator-box-left
+  +indicator-box
+  background-color: $fiolet-color
+  left: 0
   &::after
     +triangle-border-base
     left: $indicator-width
@@ -159,17 +160,11 @@ $indicator-width: 46px
     border-color: transparent transparent transparent $fiolet-color
 
 .indicator-box-right
-  position: absolute
+  +indicator-box
   background-color: $oragne-color
-  height: $indicator-height
   right: 0
-  position: absolute
-  top: calc(90%/2)
-  width: $indicator-width
-
   &::after
     +triangle-border-base
-
     right: $indicator-width
     border-width: ($indicator-height / 2) (0 + $indicator-height / $indicator-width + $indicator-width / 2)
     border-color: transparent $oragne-color transparent transparent
@@ -177,7 +172,7 @@ $indicator-width: 46px
 
 
 // SECTION OF STICKY-NAV
-$box-height: 100px
+$box-height: 120px
 $box-width: 84px
 
 =triangle-border-base
@@ -202,7 +197,7 @@ $box-width: 84px
   &::after
     +triangle-border-base
     left: $box-width
-    border-width: $box-width 0 0 ($box-width / 2)
+    border-width: $box-height 0 0 ($box-width / 2)
     border-color: transparent transparent transparent $services-background
 
 .box-right
@@ -213,7 +208,7 @@ $box-width: 84px
   &::after
     +triangle-border-base
     right: $box-width
-    border-width: 0 0 $box-width ($box-width / 2)
+    border-width: 0 0 $box-height ($box-width / 2)
     border-color: transparent transparent $services-background transparent
 
 
@@ -224,7 +219,7 @@ $box-width: 84px
   background-color: #eff2f4
 
   .sticky-nav
-    border: 4px solid black
+    border: 1px solid black
     background-color: $white-color
     padding: 10px 0
     position: relative
