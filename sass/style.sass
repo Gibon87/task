@@ -1,10 +1,16 @@
 $white-color: #FFF
 $blue-color: #1fb5e3
 $oragne-color: #f19621
+$fiolet-color: #7e4ae8
 $fill-color: #272b2f
+$services-background: #eff2f4
+
+
 
 *
   box-sizing: border-box
+  margin: 0
+  padding: 0
 
 
 body
@@ -19,28 +25,34 @@ header
   z-index: 999
 
 .container
+  font-size: 14px
   max-width: 1500px
   margin: 0 auto
   width: 100%
 
+
 .navigation
+
   background-color: #272b2f
   display: flex
   max-height: 70px
 
   .nav
+    font-size: 14px
     width: 100%
     margin: 20px
 
     ul
+
       display: flex
       padding: 0
       margin: 0
       list-style: none
       justify-content: flex-end
-      font-size: 16px
+
 
       li
+
         display: flex
         padding: 10px 20px
         border-left: 1px solid $white-color
@@ -113,6 +125,15 @@ header
     width: 100%
     height: 577px
 
+.slider-text
+  position: absolute
+  top: 36%
+  left: 12%
+  h2
+    color: $white-color
+    font-size: 60px
+    width: 630px
+
 // INDICATORS
 $indicator-height: 82px
 $indicator-width: 46px
@@ -124,7 +145,7 @@ $indicator-width: 46px
 
 .indicator-box-left
   position: absolute
-  background-color: #db09e6
+  background-color: $fiolet-color
   height: $indicator-height
   left: 0
   position: absolute
@@ -133,14 +154,13 @@ $indicator-width: 46px
 
   &::after
     +triangle-border-base
-
     left: $indicator-width
     border-width: ($indicator-height / 2) (0 + $indicator-height / $indicator-width + $indicator-width / 2)
-    border-color: transparent transparent transparent #db09e6
+    border-color: transparent transparent transparent $fiolet-color
 
 .indicator-box-right
   position: absolute
-  background-color: #db09e6
+  background-color: $oragne-color
   height: $indicator-height
   right: 0
   position: absolute
@@ -152,37 +172,50 @@ $indicator-width: 46px
 
     right: $indicator-width
     border-width: ($indicator-height / 2) (0 + $indicator-height / $indicator-width + $indicator-width / 2)
-    border-color: transparent #db09e6 transparent transparent
+    border-color: transparent $oragne-color transparent transparent
 
-.slider-text
-  position: absolute
-  top: 20%
-  left: 12%
 
-  h2
-    color: $white-color
-    font-size: 60px
-    width: 630px
 
 // SECTION OF STICKY-NAV
+$box-height: 100px
+$box-width: 84px
 
-=box-position-left
+=triangle-border-base
+  border-style: solid
+  content: ""
   position: absolute
-  top: -20px
+
+=box-menu-position
+  position: absolute
+  top: -60px
+  background-color: $services-background
+
+
+.box-left
+  height: $box-height
+  width: $box-width
   left: 0
-  width: 60px
-  height: 60px
-  margin: 10px
-  background-color: green
+  +box-menu-position
 
-=box-position-right
-  position: absolute
-  top: -20px
+
+.box-left
+  &::after
+    +triangle-border-base
+    left: $box-width
+    border-width: $box-width 0 0 ($box-width / 2)
+    border-color: transparent transparent transparent $services-background
+
+.box-right
+  height: $box-height
+  width: $box-width
   right: 0
-  width: 60px
-  height: 60px
-  margin: 10px
-  background-color: green
+  +box-menu-position
+  &::after
+    +triangle-border-base
+    right: $box-width
+    border-width: 0 0 $box-width ($box-width / 2)
+    border-color: transparent transparent $services-background transparent
+
 
 .menu
   display: flex
@@ -215,11 +248,7 @@ $indicator-width: 46px
           text-decoration: none
           color: #909fae
 
-  .box-left
-    +box-position-left
 
-  .box-right
-    +box-position-right
 
 // OUR SERCICES SECTION
 $padding-20: 20px
@@ -230,7 +259,7 @@ $padding-20: 20px
   justify-content: center
 
 .services-background
-  background-color: #eff2f4
+  background-color: $services-background
   display: flex
   justify-content: center
   width: 100%
@@ -279,6 +308,7 @@ $padding-20: 20px
   border: 1px solid $white-color
 
 .box-height
+  margin-bottom: 30px
   margin-top: 120px
 
 // OUR PRODUCTS SECTION
@@ -302,9 +332,11 @@ $padding-20: 20px
 .heads
   display: flex
   flex-direction: column
-  margin: 10px
-  padding: 10px
+  margin-top: 20px
+  padding: 20px
   width: 300px
+  h1
+    font-size: 34px
 
 .boxes-icons
   +flex-center-position
