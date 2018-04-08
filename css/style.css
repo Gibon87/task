@@ -3,25 +3,23 @@
   margin: 0;
   padding: 0; }
 
-body {
+.container {
   background-color: #272b2f;
   color: #626a72;
-  margin: 0;
-  padding: 0; }
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 999; }
-
-.container {
   font-size: 14px;
   max-width: 1500px;
   margin: 0 auto;
   width: 100%; }
 
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999; }
+
 .navigation {
   background-color: #272b2f;
+  display: -ms-flexbox;
   display: flex;
   max-height: 70px; }
   .navigation .nav {
@@ -29,12 +27,15 @@ header {
     width: 100%;
     margin: 20px; }
     .navigation .nav ul {
+      display: -ms-flexbox;
       display: flex;
       padding: 0;
       margin: 0;
       list-style: none;
-      justify-content: flex-end; }
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
       .navigation .nav ul li {
+        display: -ms-flexbox;
         display: flex;
         padding: 10px 20px;
         border-left: 1px solid #FFF; }
@@ -67,13 +68,16 @@ header {
   padding: 10px 0;
   text-align: center; }
   .social ul {
+    display: -ms-flexbox;
     display: flex;
+    font-size: 16px;
     padding: 0;
-    margin: 0;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
     list-style: none;
-    justify-content: flex-end;
-    font-size: 16px; }
+    margin: 0; }
     .social ul li {
+      display: -ms-flexbox;
       display: flex; }
       .social ul li a {
         width: 70px;
@@ -90,14 +94,14 @@ header {
   height: 578px;
   overflow: hidden; }
   .slider .slider-1 {
+    height: 577px;
     position: absolute;
-    width: 100%;
-    height: 577px; }
+    width: 100%; }
 
 .slider-text {
   position: absolute;
-  top: 36%;
-  left: 12%; }
+  left: 12%;
+  top: 36%; }
   .slider-text h2 {
     color: #FFF;
     font-size: 60px;
@@ -165,76 +169,93 @@ header {
     border-color: transparent transparent #eff2f4 transparent; }
 
 .menu {
+  background-color: #FFF;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  justify-content: center;
-  background-color: #FFF; }
+  -ms-flex-pack: center;
+      justify-content: center; }
   .menu .sticky-nav {
     background-color: #FFF;
     padding: 10px 0;
     position: relative;
     width: 80%; }
     .menu .sticky-nav ul {
+      display: -ms-flexbox;
       display: flex;
-      padding: 0;
-      margin: 0;
+      font-size: 16px;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
       list-style: none;
-      justify-content: space-around;
-      font-size: 16px; }
+      padding: 0;
+      margin: 0; }
       .menu .sticky-nav ul li {
         border-left: 1px solid #FFF;
+        display: -ms-flexbox;
         display: flex;
         padding: 10px 20px; }
         .menu .sticky-nav ul li a {
-          text-decoration: none;
-          color: #909fae; }
+          color: #909fae;
+          text-decoration: none; }
 
 .services-background {
   background-color: #eff2f4;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   width: 100%; }
 
 .our-services {
-  width: 80%;
-  padding: 0 40px; }
+  padding: 0 40px;
+  width: 80%; }
 
 .our-services_box {
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   margin: 0 80px;
   padding: 10px; }
 
 .head {
+  border: 1px solid #FFF;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   margin: 10px;
   padding: 10px;
-  border: 1px solid #FFF;
-  display: flex;
-  flex-direction: column;
   width: 300px; }
   .head h1 {
     color: #1fb5e3; }
 
 .text {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row; }
+  -ms-flex-direction: row;
+      flex-direction: row; }
   .text .text-1 {
     padding: 20px; }
   .text .text-2 {
     padding: 20px; }
 
 .boxes {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center; }
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .box {
+  border: 1px solid #FFF;
   margin: 10px;
   text-align: center;
   width: 300px;
-  height: 300px;
-  border: 1px solid #FFF; }
+  height: 300px; }
 
 .box-height {
   margin-bottom: 30px;
@@ -242,19 +263,22 @@ header {
 
 .products-background {
   background-color: #1fb5e3;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   width: 100%;
   color: #d8f0f8; }
 
 .our-products {
-  border: 1px solid black;
   padding: 0 40px;
   width: 80%; }
 
 .heads {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   margin-top: 20px;
   padding: 20px;
   width: 300px; }
@@ -262,9 +286,12 @@ header {
     font-size: 34px; }
 
 .boxes-icons {
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center; }
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .box-icon {
   margin: 10px;
@@ -349,12 +376,16 @@ header {
 
 .contact {
   background-color: #272b2f;
+  display: -ms-flexbox;
   display: flex; }
 
 .describe-box {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .describe-box ul {
     display: inline-block;
     padding: 0;
@@ -363,6 +394,7 @@ header {
     font-size: 16px; }
     .describe-box ul li {
       text-decoration: none;
+      display: -ms-flexbox;
       display: flex;
       padding: 10px 20px; }
       .describe-box ul li a {
@@ -370,8 +402,10 @@ header {
         color: white; }
 
 .footer {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between; }
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
 
 .left {
   margin-left: 163px; }
@@ -382,5 +416,3 @@ header {
   margin-right: 166px; }
   .right h3 {
     font-size: 12px; }
-
-/*# sourceMappingURL=style.css.map */

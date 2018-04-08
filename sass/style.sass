@@ -12,27 +12,21 @@ $services-background: #eff2f4
   margin: 0
   padding: 0
 
-
-body
+.container
   background-color: $fill-color
   color: #626a72
-  margin: 0
-  padding: 0
+  font-size: 14px
+  max-width: 1500px
+  margin: 0 auto
+  width: 100%
 
 header
   position: sticky
   top: 0
   z-index: 999
 
-.container
-  font-size: 14px
-  max-width: 1500px
-  margin: 0 auto
-  width: 100%
-
 
 .navigation
-
   background-color: #272b2f
   display: flex
   max-height: 70px
@@ -92,11 +86,13 @@ header
 
   ul
     display: flex
-    padding: 0
-    margin: 0
-    list-style: none
-    justify-content: flex-end
     font-size: 16px
+    padding: 0
+    justify-content: flex-end
+    list-style: none
+    margin: 0
+
+
 
     li
       display: flex
@@ -121,14 +117,15 @@ header
   overflow: hidden
 
   .slider-1
+    height: 577px
     position: absolute
     width: 100%
-    height: 577px
+
 
 .slider-text
   position: absolute
-  top: 36%
   left: 12%
+  top: 36%
   h2
     color: $white-color
     font-size: 60px
@@ -213,11 +210,13 @@ $box-width: 90px
 
 
 .menu
+  background-color: $white-color
+  // background-color: #eff2f4
   display: flex
   position: relative
   justify-content: center
-  background-color: $white-color
-  // background-color: #eff2f4
+
+
 
   .sticky-nav
     // border: 1px solid black
@@ -228,11 +227,11 @@ $box-width: 90px
 
     ul
       display: flex
+      font-size: 16px
+      justify-content: space-around
+      list-style: none
       padding: 0
       margin: 0
-      list-style: none
-      justify-content: space-around
-      font-size: 16px
 
       li
         border-left: 1px solid $white-color
@@ -240,8 +239,9 @@ $box-width: 90px
         padding: 10px 20px
 
         a
-          text-decoration: none
           color: #909fae
+          text-decoration: none
+
 
 
 
@@ -260,21 +260,20 @@ $padding-20: 20px
   width: 100%
 
 .our-services
-  width: 80%
   padding: 0 40px
+  width: 80%
 
 .our-services_box
   +flex-center-position
-
   margin: 0 80px
   padding: 10px
 
 .head
-  margin: 10px
-  padding: 10px
   border: 1px solid $white-color
   display: flex
   flex-direction: column
+  margin: 10px
+  padding: 10px
   width: 300px
 
   h1
@@ -291,16 +290,17 @@ $padding-20: 20px
     padding: $padding-20
 
 .boxes
-  display: flex
   align-items: center
+  display: flex
   justify-content: center
 
 .box
+  border: 1px solid $white-color
   margin: 10px
   text-align: center
   width: 300px
   height: 300px
-  border: 1px solid $white-color
+
 
 .box-height
   margin-bottom: 30px
@@ -320,7 +320,7 @@ $padding-20: 20px
   color: #d8f0f8
 
 .our-products
-  border: 1px solid black
+  // border: 1px solid black
   padding: 0 40px
   width: 80%
 
